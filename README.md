@@ -4,7 +4,17 @@ This repository contains the material of a compiler fuzzing course originally de
 
 ## Modules
 
-- **Module 0.1: Testing Refresher.** RIGHT BICEP principle: Right, boundaries, inverse and error conditions, cross checks, and performance. Automated testing. Unit testing frameworks. Examples: JUnit and SUnit.
+- **Module 0.1: Testing Refresher.**
+    - Importance of testing. RIGHT BICEP principle: Right, boundaries, inverse and error conditions, cross-checks, and performance. Automated testing. Unit testing frameworks. Examples: JUnit and SUnit.
+    - Material:
+      - Learning Pharo: [Mooc](https://mooc.pharo.org/)
+        - Week 1 Lecture 4: 🐥 Pharo Object Model in a Nutshell
+        - Week 1 Lecture 5: 🐥Lecture Pharo Syntax in a Nutshell
+        - Week 1 Lecture 6: 🐥Lecture Class and Method Definitions
+      - Introduction to SUnit unit testing
+        - Pharo by example book: https://books.pharo.org/updated-pharo-by-example/
+        - [Mooc](https://mooc.pharo.org/) Week 5 lecture 6: 🐥 SUnit: Unit Tests in Pharo
+      - Fuzzing Book, introduction to software testing: https://www.fuzzingbook.org/html/Intro_Testing.html
 - **Module 0.2: Compiler Architecture.** Compilation pipelines. Compiler frontend and backend. Parsing, name-resolution and type checking. Instruction scheduling, register allocation, and code generation. Optimising compilers, intermediate languages and optimisations. SSA form. Examples: Clang+LLVM, JVM and Pharo.
 - Module 2: El problema del oráculo de testing. Código auto-validado como oráculo.
 Testing basado en propiedades. Framework Quickcheck y variantes. Generadores
