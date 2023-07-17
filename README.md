@@ -4,9 +4,8 @@ This repository contains the material of a compiler fuzzing course originally de
 
 ## Modules
 
-- Module 1: Introducción al testing de software. Testing automatizado. Identificación de
-casos de borde. Relaciones inversas. Condiciones de error. Fuzzing y testing
-aléatoreo.
+- **Module 0.1: Testing Refresher.** RIGHT BICEP principle: Right, boundaries, inverse and error conditions, cross checks, and performance. Automated testing. Unit testing frameworks. Examples: JUnit and SUnit.
+- **Module 0.2: Compiler Architecture.** Compilation pipelines. Compiler frontend and backend. Parsing, name-resolution and type checking. Instruction scheduling, register allocation, and code generation. Optimising compilers, intermediate languages and optimisations. SSA form. Examples: Clang+LLVM, JVM and Pharo.
 - Module 2: El problema del oráculo de testing. Código auto-validado como oráculo.
 Testing basado en propiedades. Framework Quickcheck y variantes. Generadores
 personalizados. Testing metamórfico.
