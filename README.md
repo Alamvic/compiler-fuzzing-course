@@ -6,6 +6,10 @@ This repository contains the material of a compiler fuzzing course originally de
 
 - **Module 0.1: Testing Refresher.**
     - Importance of testing. RIGHT BICEP principle: Right, boundaries, inverse and error conditions, cross-checks, and performance. Automated testing. Unit testing frameworks. Examples: JUnit and SUnit.
+    - Practice:
+        - Basic Pharo programming
+        - Unit tests in pharo
+        - Commit code in Git using iceberg
     - Material:
       - Learning Pharo: [Mooc](https://mooc.pharo.org/)
         - Week 1 Lecture 4: 🐥 Pharo Object Model in a Nutshell
