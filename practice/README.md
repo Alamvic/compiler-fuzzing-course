@@ -14,26 +14,29 @@ The following sections explain Smi main concepts, grammar, and the architecture 
 
 ### Operations
 
-Smic has functions, operators, and array operations.
+Smi has functions, operators, and array operations.
 Functions receive arbitrary arguments and return always a single value.
 Binary operators are infix, operate between two values and produce a value.
 Array operations allow to read or write a value of an array.
 
-Smic also provides a simple `Print` instruction for debugging purposes that receives a single string as an argument.
+Smi also provides a simple `Print` instruction for debugging purposes that receives a single string as an argument.
 Strings can only be used in `Print` statements, and Smic does not provide operations to manipulate strings (e.g., concatenate, iterate, craft strings).
 
 ### Values
 
-Smic has the following values:
+Smi has the following values:
  - Integers
    - 63-bit integers in 64-bit systems, 31-bit integers in 32-bit systems
    - Binary arithmetic operators: `+`, `-`, `*`, `/`
+   - Binary comparison operators: `>`, `<`, `>=`, `<=`, `=`
    - Overflow is checked at runtime
  - Arrays
    - Stack allocated
    - 1-based index (Smalltalk inspired ;))
    - Contain other values (integers or arrays)
    - Bounds are checked at runtime
+
+**About boolean values:** To avoid adding new types to the language, the language supports the idea of truthy values, inspired by Javascript and C :). In Smi, integer 0 is false, while all other values are true.
 
 ### Control flow
 
@@ -73,11 +76,43 @@ The syntax of the grammar is the one expected by Smacc, the smalltalk compiler c
 You can find more information about Smacc in [its book](http://books.pharo.org/booklet-Smacc/pdf/2018-10-21-Smacc-Compiler.pdf).
 The version of Smacc used for this course can be found in [this repository](https://github.com/guillep/Smacc) and is a derivative of the work in [here](https://github.com/SmaCCRefactoring/SmaCC).
 
-## Installing Smic
+## The Smi infrastructure
 
+### Installation
 - smic loading
 - what pharo version
 - install unicorn
+
+### Compiler Architecture
+
+Smi compiler is divided into a classical pipeline architecture.
+
+**Front-end:** A parser auto-generated using a tool like [yacc](https://es.wikipedia.org/wiki/Yacc) generates abstract syntax trees (ASTs) from source code. The parser performs the syntactic validation of programs. Then the front-end performs simple semantic analyses related to name resolution. Type analysis/checking is not done at the front-end: all type-checks are pushed as generated code. At the far end of the front-end, an IR generator translates ASTs into the compiler mid-end intermediate representation.
+
+**Mid-end:** The mid-end of the compiler is made of phases that manipulate a language-independent and machine-independent intermediate language (IR).
+The IR is made of a control flow graph in SSA form. Instructions are nodes in the graph of use-defs that needs to be maintained throughout all mid-end phases.
+Phases are either analyses or transformations. Analyses produce information for subsequent phases. Transformations mutate the program in intermediate language to either simplify it (an optimization) or produce optimization opportunities for later phases.
+
+**Back-end:** The back-end responsibility is to lower the IR into a machine-dependent representation. It is organized as phases such as register allocation and code generation.
+
+### Compiler optimisations
+
+Here is a list of compiler optimizations supported by Smic.
+
+- **Sparse Conditional Constant Propagation:** Single pass constant propagation, constant folding, and dead branch elimination.
+- **Dead code elimination:** A mark-and-sweep-like algorithm removing instructions with no uses and no side effects.
+- **Branch simplifications:** Simplify boolean expressions and branches.
+- **Clean control flow:** Simplify control flow patterns such as jumps to jumps, merge contiguous basic blocks...
+- **Copy propagation:** Propagates the values of copy instructions in the program.
+- **Dead path elimination:** Computes dead paths from data-flow paths, splits basic blocks, and eliminates dead branches.
+- **Global value numbering:** Computes symbolic versions of expressions to find redundances and push them up in the program.
+- **Redundant copy elimination:** Simplify copy instructions in the form `A:=A`.
+- **Phi function simplification:** Simplify phi functions where all operands have the same value.
+- **Canonicaliser:** Performs peephole optimizations that simplify sequences of instructions.
+
+### Runners, Cross-compilation and Cross-execution
+
+### Usage Example
 
 ## Day 1 - Exercises
 ## Day 2 - Exercises
