@@ -1,0 +1,63 @@
+%glr;
+%root Abstract;
+%prefix Smi;
+%suffix Node;
+
+%left ":=";
+%left "+" "-" "*" "<" "<=" ">" "=";
+
+<number> : \d+;
+<whitespace> : \s+;
+<LETTER> : [a-zA-Z_];
+<IDENTIFIER>: <LETTER> (<LETTER>|\d)*;
+<STRING_LITERAL>: L? \" ( (\\ .) | ([^\\\"]) )* \";
+
+Program : FunctionList 'functions' {{}};
+
+FunctionList
+	: Function 'function' { OrderedCollection with: '1' }
+	| FunctionList Function 'function'  { '1' copyWith: '2' }
+	| { OrderedCollection new }
+	;
+
+Function : "function" <IDENTIFIER> 'name' "(" ParameterList 'parameters' ")" Block 'body' {{Function}};
+
+ParameterList
+	: <IDENTIFIER> 'parameter' { OrderedCollection with: '1' }
+	| ParameterList "," <IDENTIFIER> 'parameter'  { '1' copyWith: '3' }
+	| { OrderedCollection new }
+	;
+
+Block : "{" StatementList 'statements' "}" {{}};
+
+StatementList
+	: Statement 'statement' { OrderedCollection with: '1' }
+	| StatementList Statement 'Statement'  { '1' copyWith: '2' }
+	| { OrderedCollection new }
+	;
+
+Statement
+	: "return" Expression 'expression' ";" {{Return}}
+	| "if" Expression 'condition' "then" Block 'body' {{Conditional}}
+	| Expression 'expression' ";" { '1' }
+	| "Print" <STRING_LITERAL> 'string' ";" {{PrintStatement}}
+	;
+
+ExpressionList
+	: Expression 'expression' { OrderedCollection with: '1' }
+	| ExpressionList "," Expression 'expression'  { '1' copyWith: '3' }
+	| { OrderedCollection new }
+	;
+
+Expression
+	: <number> 'value' {{Number}}
+	| <IDENTIFIER> 'variable' {{VariableRead}}
+	| <IDENTIFIER> 'variable' "[" Expression 'index' "]"  {{ArrayRead}}
+	| "Array" "[" Expression 'size' "]"  {{Array}}
+	| Expression 'array' "." "size"  {{ArraySize}}
+	| <IDENTIFIER> 'variable' ":=" Expression 'value' {{Assignment}}
+	| <IDENTIFIER> 'variable' "[" Expression 'index' "]" ":=" Expression 'value' {{ArrayWrite}}
+	| Expression 'left' BinaryOperator 'operator' Expression 'right' {{BinaryOperator}}
+	| <IDENTIFIER> 'functionName' "(" ExpressionList 'arguments' ")" {{FunctionCall}}
+	;
+BinaryOperator : "+" | "-" | "*" | "/" | "<" | "<=" | "=" | ">" | ">=";
