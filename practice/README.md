@@ -2,10 +2,15 @@
 
 This directory contains code and instructions to run the Smic learning compiler.
 
-## About Smic
+## About Smi and Smic
 
-Smic (*salaire minimum de croissance* in French) is a small imperative programming language meant for learning, and in this case, to learn compiler testing.
-Smic is a small programming language in terms of features:
+Smi is a small imperative programming language meant for learning, and in this case, to learn compiler testing.
+It's compiler is named Smic after Smi compiler.
+The name has been inspired by many sources:
+ - *salaire minimum de croissance*, the French name for the minimum salary, because this is the smallest you can live with.
+ - **Smi** (Small integer) **c**ompiler, because it was originally intended as a language with just small numbers.
+
+The following sections explain Smi main concepts, grammar, and the architecture of its compiler Smic.
 
 ### Operations
 
@@ -60,6 +65,13 @@ function sum_from(anArray, i){
   return anArray[i] + sum_from(anArray, i + 1);
 }
 ```
+
+### Smi Grammar
+
+Smi's grammar, as it was used to generate it's parser and AST can be found in [this file](grammar.txt).
+The syntax of the grammar is the one expected by Smacc, the smalltalk compiler compiler.
+You can find more information about Smacc in [its book](http://books.pharo.org/booklet-Smacc/pdf/2018-10-21-Smacc-Compiler.pdf).
+The version of Smacc used for this course can be found in [this repository](https://github.com/guillep/Smacc) and is a derivative of the work in [here](https://github.com/SmaCCRefactoring/SmaCC).
 
 ## Installing Smic
 
