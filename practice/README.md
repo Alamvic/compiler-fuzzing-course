@@ -110,9 +110,34 @@ Here is a list of compiler optimizations supported by Smic.
 - **Phi function simplification:** Simplify phi functions where all operands have the same value.
 - **Canonicaliser:** Performs peephole optimizations that simplify sequences of instructions.
 
-### Runners, Cross-compilation and Cross-execution
+### Cross-compilation and Cross-execution
+
+The Smi compiler allows for cross-compilation by specifying the target architecture.
+This will produce a compiled program using the chosen ISA.
+To run programs written in Smi, the Smi infrastructure also provides a runner.
+
+The runner reads the architecture of the compiled program and configures itself to execute native code of the same architecture.
+Inside, the runner uses [Unicorn](https://github.com/unicorn-engine/unicorn), a machine code simulator based on [QEMU](https://www.qemu.org/). 
+
+The result of running a program is always the value returned by the `main` function.
 
 ### Usage Example
+
+```smalltalk
+
+programAST := SmiParser parse: 'function main(){
+		x := 7;
+		return x + 1;
+}'.
+
+objectProgram := SmiCompiler new
+		o0;
+		architecture: #aarch64;
+		compile: programAST.
+
+result := SmiRunner new run: objectProgram
+```
+
 
 ## Day 1 - Exercises
 ## Day 2 - Exercises
