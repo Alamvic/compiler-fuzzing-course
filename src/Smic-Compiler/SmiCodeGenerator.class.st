@@ -239,7 +239,7 @@ SmiCodeGenerator >> initializeCompiler [
 			 yourself). "bytes of word size in 64 bits"
 	interpreter memoryManager: memory memoryManager.
 	interpreter objectMemory: memory.
-	interpreter heapBase: 0.
+	"interpreter heapBase: 0."
 	cogit setInterpreter: interpreter.
 
 	"Prepare code memory"
