@@ -116,6 +116,8 @@ Metacello new
 	load
 ```
 
+9. Save your image!
+
 ### Compiler Architecture
 
 Smi compiler is divided into a classical pipeline architecture.
