@@ -85,8 +85,10 @@ Follow the following steps to get a running environment. When using Pharo, do no
 1. First, start by building the unicorn simulator from [this repo](https://github.com/pharo-project/unicorn/tree/pharo-vm-unicorn2), branch `pharo-vm-unicorn2`. Follow the readme installation and do not forget to change the branch. Also, be sure that you install the package, otherwise, see step 4.
 
  
-3. Clone the [pharo-vm code repository](https://github.com/pharo-project/pharo-vm/). We are going to clone it from outside the IDE for current performance problems in libgit2 -- also, do not do a shallow clone as libgit2 does not yet support it.
-4. Download a Pharo 11 image. You can follow the installation instructions in [Pharo's webpage](https://pharo.org), or:
+3. Clone the [pharo-vm code repository](https://github.com/pharo-project/pharo-vm/), and checkout the `druid` branch. We are going to clone it from outside the IDE for current performance problems in libgit2 -- also, do not do a shallow clone as libgit2 does not yet support it.
+
+
+5. Download a Pharo 11 image. You can follow the installation instructions in [Pharo's webpage](https://pharo.org), or:
     - Option 1: Use the Pharo launcher
     <img width="1088" alt="imagen" src="https://github.com/Alamvic/compiler-fuzzing-course/assets/708322/eb7e4d14-6161-42ba-8241-c22d7af5b4a1">
     
