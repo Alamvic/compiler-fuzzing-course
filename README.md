@@ -6,24 +6,7 @@ This repository contains the material of a compiler fuzzing course originally de
 
 The course is divided into several mini-modules:
 
-- **Module 0.1: Testing Refresher.**
-    - Importance of testing. RIGHT BICEP principle: Right, boundaries, inverse and error conditions, cross-checks, and performance. Automated testing. Unit testing frameworks. Examples: JUnit and SUnit.
-    - Practice from [Mooc](https://mooc.pharo.org/) at least:
-        - Week 1 Lecture 11: Packages, classes and methods
-        - Week 1 Lecture 12: Adding some unit tests
-        - Week 1 Lecture 13: Looking back at method creation
-        - Week 1 Lecture 14: Save your code with Iceberg
-        - Week 1 Lecture 15: Object initialization
-        - Week 1 Lecture 17: Looking a commit history and changes with Iceberg
-    - Material:
-      - Learning Pharo: [Mooc](https://mooc.pharo.org/)
-        - Week 1 Lecture 4: 🐥 Pharo Object Model in a Nutshell
-        - Week 1 Lecture 5: 🐥Lecture Pharo Syntax in a Nutshell
-        - Week 1 Lecture 6: 🐥Lecture Class and Method Definitions
-      - Introduction to SUnit unit testing
-        - Pharo by example book: https://books.pharo.org/updated-pharo-by-example/
-        - [Mooc](https://mooc.pharo.org/) Week 5 lecture 6: 🐥 SUnit: Unit Tests in Pharo
-      - Fuzzing Book, introduction to software testing: https://www.fuzzingbook.org/html/Intro_Testing.html
+- **Module 0.1: Testing Refresher.** Importance of testing. RIGHT BICEP principle: Right, boundaries, inverse and error conditions, cross-checks, and performance. Automated testing. Unit testing frameworks. Examples: JUnit and SUnit.
 - **Module 0.2: Compiler Architecture.** Compilation pipelines. Compiler frontend and backend. Parsing, name-resolution, and type checking. Instruction scheduling, register allocation, and code generation. Optimizing compilers, intermediate languages, and optimizations. SSA form. Examples: Clang+LLVM, JVM, and Pharo.
 - **Module 1: Compiler Testing 101.** The need, importance, and challenges of compiler testing. Strategies for testing: unit testing and regression testing. Example of a register allocator Unit testing. Regression tests as black-box maintainable tests. Parametrized tests. Simulation and emulation for compiler tests.
 
