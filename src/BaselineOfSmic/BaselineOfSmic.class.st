@@ -33,7 +33,7 @@ BaselineOfSmic >> baseline: spec [
 	spec for: #common do: [
 		spec
 			baseline: 'Phuzzer'
-				with: [ spec repository: 'github://alamvic/phuzzer' ];
+				with: [ spec repository: 'github://alamvic/phuzzer:main' ];
 			baseline: 'Druid'
 				with: [ spec repository: 'github://alamvic/druid:smic' ];
 			package: 'Smic-Compiler'
