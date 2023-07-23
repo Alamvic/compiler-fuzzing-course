@@ -1,4 +1,4 @@
-<img width="503" alt="imagen" src="https://github.com/Alamvic/compiler-fuzzing-course/assets/708322/ddca2a0a-1fe3-46aa-8dae-df8678791f51"># Readme
+# Readme
 
 This directory contains code and instructions to run the Smic learning compiler.
 
@@ -108,7 +108,10 @@ Follow the following steps to get a running environment. When using Pharo, do no
 8. Install the course package by executing the following expression in a playground:
 
 ```smalltalk
-
+Metacello new
+	baseline: 'Smic';
+	repository: 'github://alamvic/compiler-fuzzing-course:main';
+	load
 ```
 
 ### Compiler Architecture
