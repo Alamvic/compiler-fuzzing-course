@@ -82,24 +82,28 @@ The version of Smacc used for this course can be found in [this repository](http
 
 Follow the following steps to get a running environment. When using Pharo, do not forget to "Save" the image after each step using the menu item.
 
-1. First, start by building the unicorn simulator from [this repo](https://github.com/pharo-project/unicorn/tree/pharo-vm-unicorn2), branch `pharo-vm-unicorn2`. Follow the readme installation and do not forget to change the branch!
-2. Clone the [pharo-vm code repository](https://github.com/pharo-project/pharo-vm/). We are going to clone it from outside the IDE for current performance problems in libgit2 -- also, do not do a shallow clone as libgit2 does not yet support it.
-3. Download a Pharo 11 image. You can follow the installation instructions in [Pharo's webpage](https://pharo.org), or:
+1. First, start by building the unicorn simulator from [this repo](https://github.com/pharo-project/unicorn/tree/pharo-vm-unicorn2), branch `pharo-vm-unicorn2`. Follow the readme installation and do not forget to change the branch. Also, be sure that you install the package, otherwise, see step 4.
+
+ 
+3. Clone the [pharo-vm code repository](https://github.com/pharo-project/pharo-vm/). We are going to clone it from outside the IDE for current performance problems in libgit2 -- also, do not do a shallow clone as libgit2 does not yet support it.
+4. Download a Pharo 11 image. You can follow the installation instructions in [Pharo's webpage](https://pharo.org), or:
     - Option 1: Use the Pharo launcher
     <img width="1088" alt="imagen" src="https://github.com/Alamvic/compiler-fuzzing-course/assets/708322/eb7e4d14-6161-42ba-8241-c22d7af5b4a1">
     
     - Option 2: [Use zeroconf installation](get.pharo.org/) with parameters 110+vm
 
-4. Open Your Pharo 11 image.
+4. If you couldn't our wouldn't install globally unicorn in your system, two other options open here: install a symlink to the unicorn library next to the downloaded VM executable. Or extend your `LD_LIBRARY_PATH` with Unicorn's library path. Be sure to restart all your terminals in the latter case.
+
+5. Open Your Pharo 11 image.
 <img width="1111" alt="imagen" src="https://github.com/Alamvic/compiler-fuzzing-course/assets/708322/8b408f11-6855-4412-b805-51151496e8b8">
 
-5. Import the Pharo-vm repository from your disk into the system
+6. Import the Pharo-vm repository from your disk into the system
 <img width="1088" alt="imagen" src="https://github.com/Alamvic/compiler-fuzzing-course/assets/708322/87ae9e29-f687-4e03-b022-fdfba74d2dc2">
 
-6. Load the baseline and lock it
+7. Load the baseline and lock it
 <img width="573" alt="imagen" src="https://github.com/Alamvic/compiler-fuzzing-course/assets/708322/c3d9165e-d35c-4d26-8df6-b691399e8300">
 
-7. Install the course package by executing the following expression in a playground:
+8. Install the course package by executing the following expression in a playground:
 
 ```smalltalk
 
