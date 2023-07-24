@@ -116,6 +116,8 @@ Metacello new
 	load
 ```
 
+9. Save your image!
+
 ### Compiler Architecture
 
 Smi compiler is divided into a classical pipeline architecture.
@@ -173,7 +175,33 @@ result := SmiRunner new run: objectProgram
 
 
 ## Day 1 - Exercises
+
+### Part 1 - Warming up with Pharo
+1. Familiarize yourself with the Pharo programming language and IDE. Program a simple linked list with tests. Create a package, a couple of classes, and methods. Run your tests.
+2. Commit your code to git with Pharo.
+
+### Part 2 - Warming up with Smic
+1. Write some programs and tests for Smic. Write at least a test for each of the following scenarios/cases:
+    1. return values of functions
+    2. arithmetic: e.g., adding up two or more numbers
+    3. add tests for array allocation, and read/writes
+    4. write and test a factorial function
+    5. 
+2. Write a couple of tests for syntax errors. E.g., missing parentheses, curly braces, semicolons, incomplete expressions...
+3. Try writing some semantic bugs. What can you think about?
+
 ## Day 2 - Exercises
+
+TBA
+
 ## Day 3 - Exercises
+
+TBA
+
 ## Day 4 - Exercises
+
+TBA
+
 ## Day 5 - Exercises
+
+TBA
