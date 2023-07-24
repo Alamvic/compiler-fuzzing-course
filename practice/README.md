@@ -97,7 +97,8 @@ Follow the following steps to get a running environment. When using Pharo, do no
 4. If you couldn't or wouldn't install globally unicorn in your system, two other options open here: install a symlink to the unicorn library next to the downloaded VM executable. Or extend your `LD_LIBRARY_PATH` with Unicorn's library path. Be sure to restart all your terminals in the latter case.
 
 5. Open Your Pharo 11 image.
-<img width="1111" alt="imagen" src="https://github.com/Alamvic/compiler-fuzzing-course/assets/708322/8b408f11-6855-4412-b805-51151496e8b8">
+<img width="1087" alt="imagen" src="https://github.com/Alamvic/compiler-fuzzing-course/assets/708322/fbbb3889-2bce-4eaf-afcb-b9998e857af7">
+
 
 6. Import the Pharo-vm repository from your disk into the system
 <img width="724" alt="imagen" src="https://github.com/Alamvic/compiler-fuzzing-course/assets/708322/01bffc10-8efc-4b71-9400-8004a9530592">
