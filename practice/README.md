@@ -195,7 +195,10 @@ result := SmiRunner new run: objectProgram
 
 ## Day 2 - Exercises
 
-TBA
+1. Fuzz the `asDate` method with a random fuzzer.
+2. Fuzz the `asDate` method with a grammar that approximates syntactically valid dates.
+3. Write a simple Smic grammar that will produce main functions returning random numbers.
+4. Extend the previous grammar to return arithmetic expressions (+,-,*)
 
 ## Day 3 - Exercises
 
