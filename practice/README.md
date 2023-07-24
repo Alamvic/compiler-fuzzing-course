@@ -118,6 +118,8 @@ Metacello new
 ```
 
 9. Save your image!
+<img width="1087" alt="imagen" src="https://github.com/Alamvic/compiler-fuzzing-course/assets/708322/126a9b5d-440e-4844-b005-fb8c5c919981">
+
 
 ### Compiler Architecture
 
