@@ -8,6 +8,21 @@ Class {
 	#category : #'Smic-Compiler-Frontend'
 }
 
+{ #category : #'as yet unclassified' }
+SmiCompiler class >> supportedOptimizations [
+
+	^ {
+		DRBranchCollapse new.
+		DRCopyPropagation new.
+		DRPhiSimplication new.
+		(DRDeadCodeElimination then: DRRedundantCopyElimination).
+		DRCleanControlFlow new.
+		(DRDeadEdgeSplitting then: DRDeadBranchElimination).
+		DRGlobalValueNumbering new.
+		DRCogitCanonicaliser new.
+		(DRSCCP then: DRDeadBlockElimination) }
+]
+
 { #category : #compiling }
 SmiCompiler >> allocateRegisters: ir [
 
@@ -120,6 +135,18 @@ SmiCompiler >> o2 [
 		                 DRGlobalValueNumbering new.
 		                 DRCogitCanonicaliser new.
 		                 (DRSCCP then: DRDeadBlockElimination) }
+]
+
+{ #category : #accessing }
+SmiCompiler >> optimisations [
+
+	^ optimisations
+]
+
+{ #category : #accessing }
+SmiCompiler >> optimisations: anObject [
+
+	optimisations := anObject
 ]
 
 { #category : #compiling }
