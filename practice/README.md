@@ -90,21 +90,21 @@ Follow the following steps to get a running environment. When using Pharo, do no
 
 5. Download a Pharo 11 image. You can follow the installation instructions in [Pharo's webpage](https://pharo.org), or:
     - Option 1: Use the Pharo launcher
-    <img width="1088" alt="imagen" src="https://github.com/Alamvic/compiler-fuzzing-course/assets/708322/eb7e4d14-6161-42ba-8241-c22d7af5b4a1">
+    <img width="1088" alt="imagen" src="https://github.com/Alamvic/compiler-fuzzing-course/assets/708322/44906244-ac77-4e7f-9b64-604247f5882c">
     
     - Option 2: [Use zeroconf installation](get.pharo.org/) with parameters 110+vm
 
-4. If you couldn't our wouldn't install globally unicorn in your system, two other options open here: install a symlink to the unicorn library next to the downloaded VM executable. Or extend your `LD_LIBRARY_PATH` with Unicorn's library path. Be sure to restart all your terminals in the latter case.
+4. If you couldn't or wouldn't install globally unicorn in your system, two other options open here: install a symlink to the unicorn library next to the downloaded VM executable. Or extend your `LD_LIBRARY_PATH` with Unicorn's library path. Be sure to restart all your terminals in the latter case.
 
 5. Open Your Pharo 11 image.
 <img width="1111" alt="imagen" src="https://github.com/Alamvic/compiler-fuzzing-course/assets/708322/8b408f11-6855-4412-b805-51151496e8b8">
 
 6. Import the Pharo-vm repository from your disk into the system
-<img width="1088" alt="imagen" src="https://github.com/Alamvic/compiler-fuzzing-course/assets/708322/87ae9e29-f687-4e03-b022-fdfba74d2dc2">
+<img width="724" alt="imagen" src="https://github.com/Alamvic/compiler-fuzzing-course/assets/708322/01bffc10-8efc-4b71-9400-8004a9530592">
 
 7. Load the baseline and lock it
-<img width="573" alt="imagen" src="https://github.com/Alamvic/compiler-fuzzing-course/assets/708322/c3d9165e-d35c-4d26-8df6-b691399e8300">
-<img width="503" alt="imagen" src="https://github.com/Alamvic/compiler-fuzzing-course/assets/708322/2b74965b-9701-4fd5-8031-f59aec0ae86a">
+<img width="700" alt="imagen" src="https://github.com/Alamvic/compiler-fuzzing-course/assets/708322/994d9e05-e73c-4d99-afc9-f40f6d893874">
+<img width="696" alt="imagen" src="https://github.com/Alamvic/compiler-fuzzing-course/assets/708322/aa570330-fecd-447b-821e-132a0045dfde">
 
 
 8. Install the course package by executing the following expression in a playground:
