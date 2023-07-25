@@ -10,8 +10,8 @@ The course is divided into several mini-modules:
 - **Module 0.2: Compiler Architecture.** Compilation pipelines. Compiler frontend and backend. Parsing, name-resolution, and type checking. Instruction scheduling, register allocation, and code generation. Optimizing compilers, intermediate languages, and optimizations. SSA form. Examples: Clang+LLVM, JVM, and Pharo.
 - **Module 1: Compiler Testing 101.** The need, importance, and challenges of compiler testing. Strategies for testing: unit testing and regression testing. Example of a register allocator Unit testing. Regression tests as black-box maintainable tests. Parametrized tests. Simulation and emulation for compiler tests.
 
-- **Module 2: Introduction to Fuzzing.** TBA
-- **Module 3: Grammar-Based Fuzzing.** TBA
+- **Module 2: Introduction to Fuzzing.** Testing with randomly generated data. Fuzzing. Guide fuzzers with domain knowledge. Building an initial fuzzing framework. Evaluating results.
+- **Module 3: Grammar-Based Fuzzing.** Compilers Phases as fuzzing barriers. Syntactic fuzzing based on grammars. Building a Grammar fuzzer.
 - **Module 4: The Oracle Problem.** TBA
 - **Module 5: Differential Testing.** TBA
 - **Module 6: Cross-Optimization Testing.** TBA
