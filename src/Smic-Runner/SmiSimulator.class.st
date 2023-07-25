@@ -31,6 +31,12 @@ SmiSimulator >> aliasForRegister: aRegisterName [
 	^ registerAliases at: aRegisterName ifAbsent: [ '' ]
 ]
 
+{ #category : #copying }
+SmiSimulator >> copyFrom: anInteger to: anInteger2 [ 
+	
+	^ unicorn memoryAt: anInteger readNext: anInteger2 - anInteger + 1
+]
+
 { #category : #disassembling }
 SmiSimulator >> disassembler [
 
