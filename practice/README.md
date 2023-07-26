@@ -202,7 +202,12 @@ result := SmiRunner new run: objectProgram
 
 ## Day 3 - Exercises
 
-TBA
+1. Fuzz the `asDate` method and the `DateParser` class with a differential runner
+2. Study the results, how can you refine the fuzzer? when are two outputs *equivalent*?
+3. Use the differential runner to test Smic programs
+    4. Try different optimization configurations -- at least o0, o1, o2.
+    5. If you see issues, How can you identify the optimization causing the issue?
+4. Combine your work above with grammar fuzzing
 
 ## Day 4 - Exercises
 
