@@ -54,11 +54,11 @@ Invalid operations yield a runtime error and make the program exit.
 ```c
 function main(){
   Print "Starting!";
-  anArray := array[3];
-  anArray[1] = 7;
-  anArray[2] = 42;
-  anArray[3] = 17;
-  return sum(anArray)
+  anArray := Array[3];
+  anArray[1] := 7;
+  anArray[2] := 42;
+  anArray[3] := 17;
+  return sum(anArray);
 }
 function sum(anArray){
   return sum_from(anArray, 1);
