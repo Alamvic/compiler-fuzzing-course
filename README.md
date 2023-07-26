@@ -12,9 +12,9 @@ The course is divided into several mini-modules:
 
 - **Module 2: Introduction to Fuzzing.** Testing with randomly generated data. Fuzzing. Guide fuzzers with domain knowledge. Building an initial fuzzing framework. Evaluating results.
 - **Module 3: Grammar-Based Fuzzing.** Compilers Phases as fuzzing barriers. Syntactic fuzzing based on grammars. Building a Grammar fuzzer.
-- **Module 4: The Oracle Problem.** TBA
-- **Module 5: Differential Testing.** TBA
-- **Module 6: Cross-Optimization Testing.** TBA
+- **Module 4: The Oracle Problem.** The Oracle problem. Derived, specified, and implicit oracles. Dealing with the absence of oracles. Introducing the Oracle problem for compilers.
+- **Module 5: Differential Testing.** Comparing existing systems to evaluate behavior. Dealing with the absence of ground truth.
+- **Module 6: Cross-Optimization Testing.** Obtaining systems to compare by variating compilers. Variate optimizations. Variate architecture.
 - **Module 7: Mutation Analysis.** TBA
 - **Module 8: Mutation for Compiler Testing.** TBA
 - **Module 9: Equivalence-Modulo-Input.** TBA
