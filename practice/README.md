@@ -207,12 +207,19 @@ result := SmiRunner new run: objectProgram
 3. Use the differential runner to test Smic programs
     4. Try different optimization configurations -- at least o0, o1, o2.
     5. If you see issues, How can you identify the optimization causing the issue?
-4. Combine your work above with grammar fuzzing
+4. Combine your work above with grammar fuzzing.
 
 ## Day 4 - Exercises
 
-TBA
-
+1. Use the mutation fuzzer to mutate a date and fuzz the date parser.
+2. Use grammar-generated inputs as seeds
+3. Implement a date-specific string mutation that swaps the day and month in a dd-mm-yyyy formatted date.
+4. Implement a smic-specific string mutation that replaces one instance of the `+` character by a `-` characters
+5. Implement AST-based mutations for Smic -- iterate the tree, find interesting nodes and replace them:
+  6. replace a number node by another number node with different value
+  7. replace a variable read node by a number node
+  8. replace a binary operator node by a different binary operator node (be careful of respecting the children!)
+ 
 ## Day 5 - Exercises
 
 TBA
