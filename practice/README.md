@@ -219,7 +219,3 @@ result := SmiRunner new run: objectProgram
   6. replace a number node by another number node with different value
   7. replace a variable read node by a number node
   8. replace a binary operator node by a different binary operator node (be careful of respecting the children!)
- 
-## Day 5 - Exercises
-
-TBA
