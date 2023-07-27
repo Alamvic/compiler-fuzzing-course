@@ -18,6 +18,7 @@ The course is divided into several mini-modules:
 - **Module 7: Mutation Analysis.** Computing test case quality as the ability to detect bugs. Competent developer hypothesis. Simulating developer errors with artificial mutations. Mutation operators, mutations, mutants. Killed and surviving mutants. Mutation score. Equivalent mutants and trivial mutants.
 - **Module 8: Mutation for Compiler Testing.** Mutants as fuzzers. String-based mutations. Domain/Language-specific mutations. AST-based mutations. Combining fuzzers.
 - **Module 9: Interpreter-Guided Compiler Testing.** Interpreters as executable semantics. Deriving fuzzers and oracles from interpreters. Concolic testing/execution.
+- **Module 10: Equivalence Module Input.** Differential testing on inputs. Metamorphic relations. Semantic-preserving mutations as compiler metamorphic relations.
 
 ## Bibliography
 
