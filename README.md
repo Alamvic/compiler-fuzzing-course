@@ -17,8 +17,7 @@ The course is divided into several mini-modules:
 - **Module 6: Cross-Optimization Testing.** Obtaining systems to compare by variating compilers. Variate optimizations. Variate architecture.
 - **Module 7: Mutation Analysis.** Computing test case quality as the ability to detect bugs. Competent developer hypothesis. Simulating developer errors with artificial mutations. Mutation operators, mutations, mutants. Killed and surviving mutants. Mutation score. Equivalent mutants and trivial mutants.
 - **Module 8: Mutation for Compiler Testing.** Mutants as fuzzers. String-based mutations. Domain/Language-specific mutations. AST-based mutations. Combining fuzzers.
-- **Module 9: Equivalence-Modulo-Input.** TBA
-- **Module 10: Interpreter-Guided Compiler Testing.** TBA
+- **Module 9: Interpreter-Guided Compiler Testing.** Interpreters as executable semantics. Deriving fuzzers and oracles from interpreters. Concolic testing/execution.
 
 ## Bibliography
 
